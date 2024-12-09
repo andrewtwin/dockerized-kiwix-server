@@ -1,6 +1,5 @@
-FROM ubuntu:focal
-RUN apt-get update
-RUN apt-get install -y wget
+FROM alpine:3
+RUN apk add --no-cache bash wget grep
 VOLUME /zims
 WORKDIR /
 COPY ./scripts ./scripts
